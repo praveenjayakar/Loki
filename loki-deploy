@@ -22,10 +22,15 @@ spec:
         volumeMounts:
         - name: config
           mountPath: /etc/loki
+        - name: loki-logs
+          mountPath: /srv/loki
       volumes:
       - name: config
         configMap:
           name: loki-config
+      - name: loki-logs
+        hostPath:
+          path: /srv/loki
 
 ---
 
