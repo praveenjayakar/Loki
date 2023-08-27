@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nas-hostpath-pvc
+spec:
+  accessModes:
+    - ReadWriteMany  
+  storageClassName: nas-hostpath-storage  
+  resources:
+    requests:
+      storage: 3Gi  
+

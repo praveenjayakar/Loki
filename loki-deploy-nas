@@ -30,8 +30,8 @@ spec:
         configMap:
           name: loki-config
       - name: loki-logs
-        hostPath:
-          path: /srv/loki
+        persistentVolumeClaim:
+          claimName: nas-hostpath-pvc
 
 ---
 
